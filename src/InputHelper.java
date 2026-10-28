@@ -20,4 +20,56 @@ public class InputHelper {
         
         return s;
     }
+
+    public static int getInt(Scanner scan, String prompt) {
+        int x = 0;
+        boolean valid = false;
+        System.out.println(prompt);
+
+        do {
+            if (scan.hasNextInt()) {
+                x = scan.nextInt();
+                valid = true;
+            } else {
+                System.out.println("Error: You must enter in an integer value");
+            }
+            scan.nextLine();
+        } while (!valid);
+        return x;
+    }
+
+    public static double getDouble(Scanner scan, String prompt) {
+        double x = 0;
+        boolean valid = false;
+        System.out.println(prompt);
+
+        do {
+            if (scan.hasNextDouble()) {
+                x = scan.nextDouble();
+                valid = true;
+            } else {
+                System.out.println("Error: You must enter in an double value");
+            }
+            scan.nextLine();
+        } while (!valid);
+        return x;
+    }
+
+    public static int getRangedInt(Scanner scan, String prompt) {
+        int x1 = 0;
+        int x2 = 0;
+        boolean valid = false;
+        System.out.println(prompt);
+
+        do {
+            if (scan.hasNextInt()) {
+                x = scan.nextInt();
+                valid = true;
+            } else {
+                System.out.println("Error: You must enter in an integer value");
+            }
+            scan.nextLine();
+        } while (!valid);
+        return x;
+    }
 }
